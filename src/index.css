@@ -1,0 +1,122 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 250 95% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 95%;
+    --secondary-foreground: 240 10% 20%;
+
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 5% 40%;
+
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 250 95% 60%;
+
+    --radius: 0.6rem;
+
+    --sidebar-background: 250 100% 99%;
+    --sidebar-foreground: 240 10% 20%;
+    --sidebar-primary: 250 95% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 95%;
+    --sidebar-accent-foreground: 240 10% 20%;
+    --sidebar-border: 240 10% 90%;
+    --sidebar-ring: 250 95% 60%;
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 250 95% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 250 95% 60%;
+
+    --sidebar-background: 240 10% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 250 95% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 250 95% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .debate-gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-debate to-debate-accent font-bold;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+  
+  .debate-button {
+    @apply bg-debate hover:bg-debate-secondary text-white font-medium py-2 px-4 rounded-md transition-all shadow-debate hover:shadow-debate-hover;
+  }
+  
+  .debate-button-outline {
+    @apply border-2 border-debate text-debate hover:bg-debate hover:text-white font-medium py-2 px-4 rounded-md transition-all;
+  }
+
+  .debate-input {
+    @apply bg-white/10 border border-white/20 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-debate;
+  }
+
+  .voice-wave {
+    @apply w-2 h-8 bg-debate mx-0.5 rounded-full animate-pulse-light;
+  }
+}
